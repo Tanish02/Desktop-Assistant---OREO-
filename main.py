@@ -62,14 +62,14 @@ def takeCommand():
         try:
             print("Recognizing...")
             query = r.recognize_google(audio, language="en-in")
-            print(f"User said: {query}")
+            print(f"User: {query}")
             return query
         except Exception as e:
             return "Some Error Occurred. Sorry from Oreo"
 
 if __name__ == '__main__':
-    print('Welcome to Oreo A.I')
-    say("Oreo A.I")
+    print("Hello I am Oreo a Desktop Assistant")
+    say("Hello I am oreo a Desktop Assistant made by Tanish")
     while True:
         print("Listening...")
         query = takeCommand()
@@ -90,11 +90,10 @@ if __name__ == '__main__':
             say(f"Sir time is {hour}  {minutes} ")
 
         elif "open facetime".lower() in query.lower():
-
             os.system("start FaceTime")
 
         elif "open pass".lower() in query.lower():
-            os.system("start Passky")
+            os.system("start Passkey")
 
         elif "Using artificial intelligence".lower() in query.lower():
             ai(prompt=query)
